@@ -1,0 +1,33 @@
+
+body {
+	background-color:#D8D8D8; 
+	}
+
+.col1 {
+	margin-top:40px;
+	
+}
+.col2{
+	margin-top:40px;
+}
+
+input {
+	margin-left:115px;
+}
+.close {
+	float:right;	
+	} 
+
+.likes {
+	
+	position:relative;
+	top:36%;
+	left:85%;
+
+}
+
+.note{
+	border:solid 1px #585858;
+	width:553px;
+	height: 150px;
+}
