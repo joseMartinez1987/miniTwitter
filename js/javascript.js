@@ -8,15 +8,20 @@ $(document).ready(function() {
 			+"</div>"
 			+text
 			+"<div class='likes'>"
-			+"<a href='#' class='glyphicon glyphicon-thumbs-up' onclick='good()'></a>"
-			+"<span class='add_like'>likes</span>"
+			+"<a href='#' class='good glyphicon glyphicon-thumbs-up'>"
+			 + "<span class='add_like' id='" + actualId + "' onclick='addLike(this)' value='0'>likes</span>"
+			+"</a>"
 			+"</div>"
 			+"</div>"
 			+"<hr>"
 			)
 		$(".text_area").val("");
 		$(".text_area").focus();
+
+		actualId++;
+		console.log(actualId);
 	})
+
 
 	})
 
@@ -25,11 +30,15 @@ $(document).ready(function() {
 		$(this).parent().fadeOut();
 })
 
-function good(){
-	var likes =0;
-	$(this).click(function(){
-		likes++;
-		$(".add_likes").html(likes);
-	})
+	var like = 0;
+	var actualId = 1;
+
+//$(".good").on("click",function() {}
+
+
+function addLike(context){
+
+	$("#" + context.id).html(++context.attributes[3].value + " likes");
+console.log($(".good"));
+	//console.log(context.attributes[3].value);
 }
-	
